@@ -11,7 +11,7 @@ export class MainComponent implements OnInit {
   constructor(private appService: AppService) {
   }
 
-  detailView: boolean = false;
+  detailView: boolean = true;
   data!: Product[];
   filter: boolean = false;
   sort: string = 'asc';

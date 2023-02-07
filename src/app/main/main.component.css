@@ -5,9 +5,7 @@
   flex-direction: column;
 }
 
-
-#mainDiv > div
-{
+#mainDiv > div {
   width: 100%;
 }
 
@@ -16,23 +14,23 @@ mat-toolbar {
   color: #fff;
 }
 
-#toolbarDiv
-{
+#toolbarDiv {
   display: flex;
   justify-content: space-between;
   width: 100%;
   color: #fff;
 }
- label {
+label {
   color: #fff;
- }
+}
 
- #submenu {
+#submenu {
   background-color: #808080;
   padding: 0 10px;
- }
+}
 
- #viewDiv {
+#viewDiv {
   display: flex;
-    justify-content: center;
+  justify-content: center;
+  margin-top: 30px;
 }
