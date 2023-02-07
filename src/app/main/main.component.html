@@ -1,1 +1,38 @@
-<p>main works!</p>
+<div id="mainDiv">
+  <div>
+      <mat-toolbar>
+        <div id="toolbarDiv">
+
+          <span>flaschenpost.de</span>
+          <div>
+            <button mat-raised-button color="primary" (click)="changeView()">
+              Switch view
+            </button>
+          </div>
+        </div>
+      </mat-toolbar>
+
+<div id="submenu">
+  <mat-slide-toggle (change)="filterData()">Filter elements greater than €2</mat-slide-toggle>
+            <mat-radio-group aria-labelledby="example-radio-group-label" (change)="changeOrder($event)"
+              class="example-radio-group" [(ngModel)]="sort">
+              <mat-radio-button class="example-radio-button" value="asc">
+                Ascending
+              </mat-radio-button>
+              <mat-radio-button class="example-radio-button" value="desc">
+                Descending
+              </mat-radio-button>
+            </mat-radio-group>
+</div>
+    <!-- <button mat-raised-button >
+      Filter > 2€ per litre
+    </button> -->
+
+  </div>
+
+  <app-bottle-view *ngIf="!detailView" [products]="data">
+
+  </app-bottle-view>
+
+  <app-detail-view *ngIf="detailView" [filter]="filter" [products]="data"> </app-detail-view>
+</div>

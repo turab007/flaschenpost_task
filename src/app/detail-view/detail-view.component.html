@@ -1,0 +1,34 @@
+<div id="productsDiv">
+  <div *ngFor="let product of products">
+    <div *ngIf="filter && product.articles[0].pricePerLiter > 2" class="productDiv">
+      <div>
+        <img class="cardImage" mat-card-image [src]="product.articles[0].image" alt="Photo of a Shiba Inu">
+      </div>
+      <div class="detailDiv">
+        <span>
+          {{product.name}}
+        </span>
+        <span>
+          {{product.articles[0].price}}
+        </span>
+        <span>{{product.articles[0].shortDescription}}</span>
+      </div>
+  </div>
+
+  <div *ngIf="!filter" class="productDiv">
+    <div>
+      <img class="cardImage" mat-card-image [src]="product.articles[0].image" alt="Photo of a Shiba Inu">
+    </div>
+    <div class="detailDiv">
+      <span>
+        {{product.name}}
+      </span>
+      <span>
+        {{product.articles[0].price}}
+      </span>
+      <span>{{product.articles[0].shortDescription}}</span>
+    </div>
+</div>
+  </div>
+
+</div>

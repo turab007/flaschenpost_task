@@ -1,0 +1,46 @@
+#mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#mainDiv > div
+{
+  width: 100%;
+}
+
+mat-toolbar {
+  background-color: #a50a50;
+  color: #fff;
+}
+
+#toolbarDiv
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #fff;
+}
+ label {
+  color: #fff;
+ }
+
+ #submenu {
+  background-color: #808080;
+  padding: 0 10px;
+ }
+
+ .mat-radio-button{
+  border-color:rgb(66, 134, 244);
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color:rgb(66, 134, 244);
+  background-color:rgb(66, 134, 244) ;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color:rgb(255, 37, 37,.26);
+}
