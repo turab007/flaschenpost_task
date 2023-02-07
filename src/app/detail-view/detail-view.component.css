@@ -2,6 +2,7 @@
 #productsDiv {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1260px;
 }
 
 .cardImage {
