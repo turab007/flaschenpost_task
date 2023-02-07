@@ -12,7 +12,6 @@ export class DetailViewComponent implements OnInit {
   @Input() filter!: boolean;
 
   ngOnInit(): void {
-    console.log('inside bottle view ', this.products)
   }
 
 }

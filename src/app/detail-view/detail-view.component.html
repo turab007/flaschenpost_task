@@ -1,5 +1,5 @@
 <div id="productsDiv">
-  <div *ngFor="let product of products">
+  <ng-container *ngFor="let product of products">
     <div *ngIf="filter && product.articles[0].pricePerLiter > 2" class="productDiv">
       <div>
         <img class="cardImage" mat-card-image [src]="product.articles[0].image" alt="Photo of a Shiba Inu">
@@ -29,6 +29,6 @@
       <span>{{product.articles[0].shortDescription}}</span>
     </div>
 </div>
-  </div>
+</ng-container>
 
 </div>

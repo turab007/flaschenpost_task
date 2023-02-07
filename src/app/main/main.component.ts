@@ -18,8 +18,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.appService.getData().subscribe(res => {
-      console.log('response ', res);
-      // this.data = res;
       this.data = res.sort((obj1, obj2) => {
         if (obj1.articles[0].price > obj2.articles[0].price) {
           return 1;
@@ -35,10 +33,7 @@ export class MainComponent implements OnInit {
       this.data.forEach((product, index) => {
         let text = product.articles[0].pricePerUnitText.match(/(\d|,)+/g).pop();
         let numb: number = +text
-        console.log(text);
-        console.log(parseFloat(text.replace(/,/g, '.')));
         product.articles[0].pricePerLiter= parseFloat(text.replace(/,/g, '.'));
-        // console.log(product)
       });
 
     })
@@ -51,12 +46,10 @@ export class MainComponent implements OnInit {
   }
 
   filterData() {
-    console.log('I am toggle')
     this.filter = !this.filter;
   }
 
   changeOrder(event: any) {
-    console.log('This is change', event);
     this.data = this.data.reverse();
 
   }

@@ -1,13 +1,7 @@
 
-img
-{
-  /* max-width: 30px; */
-}
-
 #productsDiv {
   display: flex;
   flex-wrap: wrap;
-  /* max-width: 300px; */
 }
 
 .cardImage {
@@ -46,7 +40,7 @@ img
 }
 
 #productsDiv div {
-  width: 290px;
+  width: 275px;
   height: 120px;
   margin: 10px;
 }
