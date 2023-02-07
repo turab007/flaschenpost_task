@@ -10,6 +10,7 @@ export class BottleViewComponent implements OnInit {
   constructor() {}
 
   @Input() products!: Product[];
+  @Input() filter!: boolean;
 
   ngOnInit(): void {
     console.log('inside bottle view ', this.products)

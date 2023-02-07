@@ -30,9 +30,10 @@
 
   </div>
 
-  <app-bottle-view *ngIf="!detailView" [products]="data">
+  <div id="viewDiv">
+    <app-bottle-view *ngIf="!detailView" [filter]="filter" [products]="data">
+    </app-bottle-view>
 
-  </app-bottle-view>
-
-  <app-detail-view *ngIf="detailView" [filter]="filter" [products]="data"> </app-detail-view>
+    <app-detail-view *ngIf="detailView" [filter]="filter" [products]="data"> </app-detail-view>
+  </div>
 </div>
